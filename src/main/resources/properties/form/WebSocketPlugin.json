@@ -1,0 +1,81 @@
+[
+    {
+        "title": "@@webSocket.label.config@@",
+        "properties": [{
+                "name": "id",
+                "label": "ID",
+                "type": "autocomplete",
+                "required": "True",
+                "regex_validation": "^[a-zA-Z0-9_]+$",
+                "validation_message": "@@form.textarea.invalidId@@",
+                "options_callback": "FormBuilder.getAllFieldOptions"
+            },
+            {
+                "name": "label",
+                "label": "@@form.textarea.label@@",
+                "type": "textfield",
+                "value": "Comment"
+            },
+            {
+                "name": "enableWebsocket",
+                "label": "@@form.checkbox.enableWebsocket@@",
+                "type": "checkbox",
+                "value": "false",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "@@form.checkbox.advancedOptions@@",
+        "properties": [
+            {
+                "label": "@@form.checkbox.data@@",
+                "type": "header"
+            },
+            {
+                "name": "validator",
+                "label": "@@form.checkbox.validator@@",
+                "type": "elementselect",
+                "options_ajax": "[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormValidator",
+                "url": "[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions"
+            },
+            {
+                "label": "@@form.checkbox.ui@@",
+                "type": "header"
+            },
+            {
+                "name": "readonly",
+                "label": "@@form.checkbox.readonly@@",
+                "type": "checkbox",
+                "value": "False",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            },
+            {
+                "name": "readonlyLabel",
+                "label": "@@form.checkbox.readonlyLabel@@",
+                "type": "checkbox",
+                "value": "False",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            }
+          
+        ]
+    }
+    
+
+    
+]
